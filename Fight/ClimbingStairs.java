@@ -64,7 +64,7 @@ public class ClimbingStairs {
 	}
 
 	// leetcode没有BigInteger
-	private String calcFactor(int sum, int a, int b) {
+	public String calcFactor(int sum, int a, int b) {
 
 		BigInteger res = new BigInteger("1");
 
