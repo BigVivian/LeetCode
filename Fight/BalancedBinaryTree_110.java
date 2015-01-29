@@ -6,9 +6,6 @@ public class BalancedBinaryTree_110 {
 			return true;
 		}
 
-		int left = 1;
-		int right = 1;
-
 		return false;
 	}
 
@@ -22,11 +19,7 @@ public class BalancedBinaryTree_110 {
 		}
 	}
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 	}
 
