@@ -38,7 +38,7 @@ public class BinaryTreeLevelOrderTraversal_102 {
 
 			// 1.poll the first
 			objects = queue.poll();
-			layer = (int) objects[0];
+			//layer = (int)（objects[0]）;
 			node = (TreeNode) objects[1];
 
 			if (currentLayer == layer) {
