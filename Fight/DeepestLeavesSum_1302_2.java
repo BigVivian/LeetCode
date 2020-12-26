@@ -1,5 +1,7 @@
 package Fight;
 
+import java.util.LinkedList;
+
 public class DeepestLeavesSum_1302_2 {
 
     public int deepestLeavesSum2(TreeNode root) {

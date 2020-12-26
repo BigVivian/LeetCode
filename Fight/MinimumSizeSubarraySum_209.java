@@ -11,28 +11,17 @@ package Fight;
  */
 public class MinimumSizeSubarraySum_209 {
     public int minSubArrayLen(int s, int[] nums) {
-
-        int start = 0;
-        int count = 0;
-        int min = Integer.MAX_VALUE;
-
-        for (int i = 0; i <= nums.length - 1; i++) {
-            count += nums[i];
-
-            if (count >= s) {
-                min = Math.min(min, i - start + 1);
-                while (count - nums[start] >= s) {
-                    count -= nums[start];
-                    start++;
-                    min = Math.min(min, i - start + 1);
-                }
+        int res = Integer.MAX_VALUE;
+        int left = 0;
+        int sum = 0;
+        for(int right = 0; right < nums.length; right++) {
+            sum += nums[right];
+            while(sum >= s) {
+                res = Math.min(res, right - left + 1);
+                sum -= nums[left++];
             }
         }
 
-        if (min == Integer.MAX_VALUE) {
-            return 0;
-        }
-
-        return min;
+        return (res == Integer.MAX_VALUE)? 0: res;
     }
 }

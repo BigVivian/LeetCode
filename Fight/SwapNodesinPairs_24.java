@@ -2,12 +2,12 @@ package Fight;
 
 /**
  * 链表，每两个结点交换顺序，画图便于理解
- * 
+ *
  * pre -> A -> B -> next <br>
  * pre -> B -> A -> next <br>
- * 
+ *
  * @author Vivian
- * 
+ *
  */
 public class SwapNodesinPairs_24 {
 	public ListNode swapPairs(ListNode head) {
@@ -36,6 +36,28 @@ public class SwapNodesinPairs_24 {
 
 		return tmpHead.next;
 	}
+
+	public ListNode swapPairs2(ListNode head) {
+        ListNode root = new ListNode();
+        root.next = head;
+
+        swap(root, root.next);
+
+        return root.next;
+    }
+
+    public void swap(ListNode pre, ListNode first) {
+        if(first == null) return;
+
+        ListNode second = first.next;
+        if(second == null) return;
+
+        first.next = second.next;
+        pre.next = second;
+        second.next = first;
+
+        swap(first, first.next);
+    }
 
 	public static void main(String[] args) {
 		ListNode one = new ListNode(1);
