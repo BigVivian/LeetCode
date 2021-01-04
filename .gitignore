@@ -46,3 +46,5 @@ Temporary Items
 *.xml
 out/*
 *.iml
+Fight/out/*
+Fight/.idea/*
